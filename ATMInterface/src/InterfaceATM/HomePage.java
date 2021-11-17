@@ -56,44 +56,67 @@ public class HomePage extends javax.swing.JFrame {
         status = new javax.swing.JLabel();
         next = new javax.swing.JButton();
         option = new javax.swing.JLabel();
+        click = new javax.swing.JLabel();
+        no0 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Welcome To XYZ ATM");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 11, 126, 26));
 
         jLabel2.setText("PLEASE ENTER YOUR CARD NO.");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 61, 180, 29));
 
         CardNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CardNoActionPerformed(evt);
             }
         });
+        getContentPane().add(CardNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 65, 170, -1));
 
         deposite.setText(">>>");
+        deposite.setEnabled(false);
         deposite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 depositeActionPerformed(evt);
             }
         });
+        getContentPane().add(deposite, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 64, -1, -1));
 
         jLabel3.setText("Deposite");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 68, -1, -1));
 
         pinChange.setText(">>>");
+        pinChange.setEnabled(false);
         pinChange.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pinChangeActionPerformed(evt);
             }
         });
+        getContentPane().add(pinChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 114, -1, -1));
 
         jLabel4.setText("Change Pin");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 118, -1, -1));
 
         withdraw.setText("<<<");
+        withdraw.setEnabled(false);
+        withdraw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                withdrawActionPerformed(evt);
+            }
+        });
+        getContentPane().add(withdraw, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 64, 65, -1));
 
         jLabel5.setText("Withdraw");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 68, -1, -1));
 
         balance.setText("<<<");
+        balance.setEnabled(false);
+        getContentPane().add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 114, 65, -1));
 
         jLabel6.setText("Balance");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 118, -1, -1));
 
         exit.setText(">>>");
         exit.addActionListener(new java.awt.event.ActionListener() {
@@ -101,8 +124,10 @@ public class HomePage extends javax.swing.JFrame {
                 exitActionPerformed(evt);
             }
         });
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 185, -1, -1));
 
         jLabel7.setText("Exit");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 189, -1, -1));
 
         no1.setText("1");
         no1.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +135,7 @@ public class HomePage extends javax.swing.JFrame {
                 no1ActionPerformed(evt);
             }
         });
+        getContentPane().add(no1, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 226, 49, 40));
 
         no2.setText("2");
         no2.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +143,7 @@ public class HomePage extends javax.swing.JFrame {
                 no2ActionPerformed(evt);
             }
         });
+        getContentPane().add(no2, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 226, 49, 40));
 
         no3.setText("3");
         no3.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +151,7 @@ public class HomePage extends javax.swing.JFrame {
                 no3ActionPerformed(evt);
             }
         });
+        getContentPane().add(no3, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 226, 49, 40));
 
         no4.setText("4");
         no4.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +159,7 @@ public class HomePage extends javax.swing.JFrame {
                 no4ActionPerformed(evt);
             }
         });
+        getContentPane().add(no4, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 284, 49, 40));
 
         no5.setText("5");
         no5.addActionListener(new java.awt.event.ActionListener() {
@@ -138,6 +167,7 @@ public class HomePage extends javax.swing.JFrame {
                 no5ActionPerformed(evt);
             }
         });
+        getContentPane().add(no5, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 284, 49, 40));
 
         no6.setText("6");
         no6.addActionListener(new java.awt.event.ActionListener() {
@@ -145,6 +175,7 @@ public class HomePage extends javax.swing.JFrame {
                 no6ActionPerformed(evt);
             }
         });
+        getContentPane().add(no6, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 284, 49, 40));
 
         no7.setText("7");
         no7.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +183,7 @@ public class HomePage extends javax.swing.JFrame {
                 no7ActionPerformed(evt);
             }
         });
+        getContentPane().add(no7, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 347, 49, 40));
 
         no8.setText("8");
         no8.addActionListener(new java.awt.event.ActionListener() {
@@ -159,6 +191,7 @@ public class HomePage extends javax.swing.JFrame {
                 no8ActionPerformed(evt);
             }
         });
+        getContentPane().add(no8, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 346, 49, 42));
 
         no9.setText("9");
         no9.addActionListener(new java.awt.event.ActionListener() {
@@ -166,6 +199,7 @@ public class HomePage extends javax.swing.JFrame {
                 no9ActionPerformed(evt);
             }
         });
+        getContentPane().add(no9, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 347, 49, 40));
 
         clear.setText("CLEAR");
         clear.addActionListener(new java.awt.event.ActionListener() {
@@ -173,6 +207,7 @@ public class HomePage extends javax.swing.JFrame {
                 clearActionPerformed(evt);
             }
         });
+        getContentPane().add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 228, 79, 36));
 
         cancel.setText("CANCEL");
         cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -180,6 +215,7 @@ public class HomePage extends javax.swing.JFrame {
                 cancelActionPerformed(evt);
             }
         });
+        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 284, 79, 37));
 
         enter.setText("<<<");
         enter.addActionListener(new java.awt.event.ActionListener() {
@@ -187,142 +223,30 @@ public class HomePage extends javax.swing.JFrame {
                 enterActionPerformed(evt);
             }
         });
+        getContentPane().add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 185, 65, -1));
 
         jLabel8.setText("Continue");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 189, -1, -1));
+        getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 114, -1, -1));
 
         next.setText("NEXT");
+        next.setEnabled(false);
         next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextActionPerformed(evt);
             }
         });
+        getContentPane().add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 344, 79, 35));
+        getContentPane().add(option, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 39, 105, 16));
+        getContentPane().add(click, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 143, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(exit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pinChange, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deposite, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(103, 103, 103)
-                                        .addComponent(no7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(no4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(no1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(no2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(no3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(no8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                                            .addComponent(no5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(no6, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                                            .addComponent(no9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                .addGap(55, 55, 55)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cancel, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
-                                    .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(next, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(39, 39, 39)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(status)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CardNo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(2, 2, 2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(69, 69, 69))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel8)))
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(balance, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                            .addComponent(withdraw, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(enter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(option, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(247, 247, 247))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(option, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CardNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deposite)
-                    .addComponent(jLabel3)
-                    .addComponent(withdraw)
-                    .addComponent(jLabel5))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pinChange)
-                    .addComponent(jLabel4)
-                    .addComponent(balance)
-                    .addComponent(jLabel6)
-                    .addComponent(status))
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(exit)
-                    .addComponent(jLabel7)
-                    .addComponent(enter)
-                    .addComponent(jLabel8))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(no1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(no2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(no3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(no4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(no5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(no6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(no9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(no7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(no8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+        no0.setText("0");
+        no0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                no0ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(no0, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 406, 183, 32));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -332,7 +256,10 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_CardNoActionPerformed
 
     private void depositeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositeActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        String cardNo = CardNo.getText();
+        Deposite form1 = new Deposite(cardNo);
+        form1.setVisible(true);
     }//GEN-LAST:event_depositeActionPerformed
 
     private void pinChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinChangeActionPerformed
@@ -364,10 +291,20 @@ public class HomePage extends javax.swing.JFrame {
             pst = connector.prepareStatement("SELECT * FROM `users` WHERE `Card No.` = ?");
             pst.setString(1,CardNo.getText());
             
-            pst.executeQuery();
-            pst.close();
-            connector.close();
-            status.setText("Card Found - Please click on the desire button for the next operation");
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()){
+                pst.close();
+                connector.close();
+                status.setText("Card Found");
+                click.setText("Please click on the desire button for the next operation");
+                deposite.setEnabled(true);
+                pinChange.setEnabled(true);
+                withdraw.setEnabled(true);
+                balance.setEnabled(true);
+            }
+            else{
+                status.setText("Card NOT Found");
+            }
 }
         catch(ClassNotFoundException | SQLException e){ System.out.println("ERROR"+ e); }
     }//GEN-LAST:event_enterActionPerformed
@@ -425,6 +362,18 @@ public class HomePage extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitActionPerformed
 
+    private void no0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_no0ActionPerformed
+        status.setText("");
+        CardNo.setText(CardNo.getText() + "0");
+    }//GEN-LAST:event_no0ActionPerformed
+
+    private void withdrawActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawActionPerformed
+        setVisible(false);
+        String cardNo = CardNo.getText();
+        Withdraw form1 = new Withdraw(cardNo);
+        form1.setVisible(true);
+    }//GEN-LAST:event_withdrawActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -465,6 +414,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton balance;
     private javax.swing.JButton cancel;
     private javax.swing.JButton clear;
+    private javax.swing.JLabel click;
     private javax.swing.JButton deposite;
     private javax.swing.JButton enter;
     private javax.swing.JButton exit;
@@ -477,6 +427,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JButton next;
+    private javax.swing.JButton no0;
     private javax.swing.JButton no1;
     private javax.swing.JButton no2;
     private javax.swing.JButton no3;
