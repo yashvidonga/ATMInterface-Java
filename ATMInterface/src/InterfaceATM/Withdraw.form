@@ -75,6 +75,7 @@
                                   <Component id="cancel" pref="79" max="32767" attributes="0"/>
                                   <Component id="clear" max="32767" attributes="0"/>
                                   <Component id="next" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="back" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -198,7 +199,10 @@
                   </Group>
               </Group>
               <EmptySpace pref="26" max="32767" attributes="0"/>
-              <Component id="no0" min="-2" pref="34" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="back" max="32767" attributes="0"/>
+                  <Component id="no0" pref="34" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -422,6 +426,14 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="status1">
+    </Component>
+    <Component class="javax.swing.JButton" name="back">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="BACK"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

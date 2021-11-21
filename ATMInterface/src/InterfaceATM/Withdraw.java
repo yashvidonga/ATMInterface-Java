@@ -61,6 +61,7 @@ public class Withdraw extends javax.swing.JFrame {
         pinField = new javax.swing.JTextField();
         no0 = new javax.swing.JButton();
         status1 = new javax.swing.JLabel();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -224,6 +225,13 @@ public class Withdraw extends javax.swing.JFrame {
             }
         });
 
+        back.setText("BACK");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -269,7 +277,8 @@ public class Withdraw extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(cancel, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                                     .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(next, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(next, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(status1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -364,7 +373,9 @@ public class Withdraw extends javax.swing.JFrame {
                         .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addComponent(no0, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(no0, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
                 .addGap(23, 23, 23))
         );
 
@@ -421,11 +432,19 @@ public class Withdraw extends javax.swing.JFrame {
                 int pinDatabase = rs.getInt(2);
                 double amtDatabase = rs.getDouble(3);
                 if (pin == pinDatabase){
-                    amtDatabase -= amt;
-                    String amtT = Double.toString(amtDatabase);
-                    String query = "UPDATE `users` SET `balance_amount` = " + amtT + " WHERE `Card No.` = " + cardNo;
-                    pst.executeUpdate(query);
-                    status1.setText("Amount Withdrawn");
+                    if (amt <= amtDatabase){
+                        amtDatabase -= amt;
+                        String amtT = Double.toString(amtDatabase);
+                        String query = "UPDATE `users` SET `balance_amount` = " + amtT + " WHERE `Card No.` = " + cardNo;
+                        pst.executeUpdate(query);
+                        status1.setText("Amount Withdrawn");
+                    }
+                    else{
+                        status1.setText("Amount to be Withdrawn Unavailable");
+                    }
+                }
+                else{
+                    status1.setText("Incorrent Pin");
                 }
             }
             pst.close();
@@ -448,6 +467,7 @@ public class Withdraw extends javax.swing.JFrame {
         pinField.setEnabled(true);
         pinLabel.setEnabled(true);
         withdrawAmt.setEnabled(false);
+        back.setEnabled(false);
         amt.setEnabled(false);
         enter.setEnabled(true);
     }//GEN-LAST:event_nextActionPerformed
@@ -554,6 +574,12 @@ public class Withdraw extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_no0ActionPerformed
 
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        setVisible(false);
+        HomePage form1 = new HomePage();
+        form1.setVisible(true);
+    }//GEN-LAST:event_backActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -594,6 +620,7 @@ public class Withdraw extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel amt;
+    private javax.swing.JButton back;
     private javax.swing.JButton balance;
     private javax.swing.JButton cancel;
     private javax.swing.JButton clear;

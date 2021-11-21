@@ -58,6 +58,7 @@ public class HomePage extends javax.swing.JFrame {
         option = new javax.swing.JLabel();
         click = new javax.swing.JLabel();
         no0 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -109,14 +110,19 @@ public class HomePage extends javax.swing.JFrame {
         getContentPane().add(withdraw, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 64, 65, -1));
 
         jLabel5.setText("Withdraw");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 68, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, -1, -1));
 
         balance.setText("<<<");
         balance.setEnabled(false);
+        balance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                balanceActionPerformed(evt);
+            }
+        });
         getContentPane().add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 114, 65, -1));
 
         jLabel6.setText("Balance");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 118, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, -1, -1));
 
         exit.setText(">>>");
         exit.addActionListener(new java.awt.event.ActionListener() {
@@ -215,7 +221,7 @@ public class HomePage extends javax.swing.JFrame {
                 cancelActionPerformed(evt);
             }
         });
-        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 284, 79, 37));
+        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 284, 80, 37));
 
         enter.setText("<<<");
         enter.addActionListener(new java.awt.event.ActionListener() {
@@ -226,7 +232,7 @@ public class HomePage extends javax.swing.JFrame {
         getContentPane().add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 185, 65, -1));
 
         jLabel8.setText("Continue");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 189, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, -1, -1));
         getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 114, -1, -1));
 
         next.setText("NEXT");
@@ -248,6 +254,15 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no0, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 406, 183, 32));
 
+        back.setText("BACK");
+        back.setEnabled(false);
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 406, 79, 32));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -263,7 +278,10 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_depositeActionPerformed
 
     private void pinChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinChangeActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        String cardNo = CardNo.getText();
+        ChangeAccPin form2 = new ChangeAccPin(cardNo);
+        form2.setVisible(true);
     }//GEN-LAST:event_pinChangeActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
@@ -301,6 +319,7 @@ public class HomePage extends javax.swing.JFrame {
                 pinChange.setEnabled(true);
                 withdraw.setEnabled(true);
                 balance.setEnabled(true);
+                back.setEnabled(true);
             }
             else{
                 status.setText("Card NOT Found");
@@ -374,6 +393,17 @@ public class HomePage extends javax.swing.JFrame {
         form1.setVisible(true);
     }//GEN-LAST:event_withdrawActionPerformed
 
+    private void balanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_balanceActionPerformed
+        setVisible(false);
+        String cardNo = CardNo.getText();
+        Balance form1 = new Balance(cardNo);
+        form1.setVisible(true);
+    }//GEN-LAST:event_balanceActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -411,6 +441,7 @@ public class HomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CardNo;
+    private javax.swing.JButton back;
     private javax.swing.JButton balance;
     private javax.swing.JButton cancel;
     private javax.swing.JButton clear;
