@@ -4,6 +4,8 @@
  */
 package InterfaceATM;
 import java.sql.*;  
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -68,6 +70,7 @@ public class Withdraw extends javax.swing.JFrame {
         jLabel1.setText("Welcome To XYZ ATM");
 
         deposite.setText(">>>");
+        deposite.setEnabled(false);
         deposite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 depositeActionPerformed(evt);
@@ -447,9 +450,19 @@ public class Withdraw extends javax.swing.JFrame {
                     status1.setText("Incorrent Pin");
                 }
             }
+            
             pst.close();
             connector.close();
-}
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Withdraw.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            setVisible(false);
+            Thankyou form1;
+            form1 = new Thankyou();
+            form1.setVisible(true);
+            }
         catch(ClassNotFoundException | SQLException e){ System.out.println("ERROR"+ e); }
     }//GEN-LAST:event_enterActionPerformed
 

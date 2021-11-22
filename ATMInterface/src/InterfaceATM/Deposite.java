@@ -4,6 +4,8 @@
  */
 package InterfaceATM;
 import java.sql.*;  
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -68,6 +70,7 @@ public class Deposite extends javax.swing.JFrame {
         jLabel1.setText("Welcome To XYZ ATM");
 
         deposite.setText(">>>");
+        deposite.setEnabled(false);
         deposite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 depositeActionPerformed(evt);
@@ -380,11 +383,10 @@ public class Deposite extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(no0, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
@@ -455,6 +457,16 @@ public class Deposite extends javax.swing.JFrame {
             connector.close();
 }
         catch(ClassNotFoundException | SQLException e){ System.out.println("ERROR"+ e); }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Deposite.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        setVisible(false);
+        Thankyou form1;
+        form1 = new Thankyou();
+        form1.setVisible(true);
     }//GEN-LAST:event_enterActionPerformed
 
     private void no1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_no1ActionPerformed
