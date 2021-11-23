@@ -27,7 +27,6 @@ public class HomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         CardNo = new javax.swing.JTextField();
         deposite = new javax.swing.JButton();
@@ -59,22 +58,27 @@ public class HomePage extends javax.swing.JFrame {
         click = new javax.swing.JLabel();
         no0 = new javax.swing.JButton();
         back = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Welcome To XYZ ATM");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 11, 126, 26));
-
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel2.setText("PLEASE ENTER YOUR CARD NO.");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 61, 180, 29));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 190, 29));
 
         CardNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CardNoActionPerformed(evt);
             }
         });
-        getContentPane().add(CardNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 65, 170, -1));
+        getContentPane().add(CardNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 170, -1));
 
         deposite.setText(">>>");
         deposite.setEnabled(false);
@@ -83,10 +87,11 @@ public class HomePage extends javax.swing.JFrame {
                 depositeActionPerformed(evt);
             }
         });
-        getContentPane().add(deposite, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 64, -1, -1));
+        getContentPane().add(deposite, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 60, -1));
 
+        jLabel3.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel3.setText("Deposite");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 68, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 60, 60, 30));
 
         pinChange.setText(">>>");
         pinChange.setEnabled(false);
@@ -95,10 +100,11 @@ public class HomePage extends javax.swing.JFrame {
                 pinChangeActionPerformed(evt);
             }
         });
-        getContentPane().add(pinChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 114, -1, -1));
+        getContentPane().add(pinChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 56, -1));
 
+        jLabel4.setFont(new java.awt.Font("Calibri", 1, 13)); // NOI18N
         jLabel4.setText("Change Pin");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 118, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 60, 20));
 
         withdraw.setText("<<<");
         withdraw.setEnabled(false);
@@ -107,10 +113,11 @@ public class HomePage extends javax.swing.JFrame {
                 withdrawActionPerformed(evt);
             }
         });
-        getContentPane().add(withdraw, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 64, 65, -1));
+        getContentPane().add(withdraw, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 60, 60, -1));
 
+        jLabel5.setFont(new java.awt.Font("Calibri", 1, 13)); // NOI18N
         jLabel5.setText("Withdraw");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(556, 60, -1, 30));
 
         balance.setText("<<<");
         balance.setEnabled(false);
@@ -119,10 +126,11 @@ public class HomePage extends javax.swing.JFrame {
                 balanceActionPerformed(evt);
             }
         });
-        getContentPane().add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 114, 65, -1));
+        getContentPane().add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 110, 65, -1));
 
+        jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel6.setText("Balance");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, 50, 30));
 
         exit.setText(">>>");
         exit.addActionListener(new java.awt.event.ActionListener() {
@@ -130,12 +138,15 @@ public class HomePage extends javax.swing.JFrame {
                 exitActionPerformed(evt);
             }
         });
-        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 185, -1, -1));
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel7.setText("Exit");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 189, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 158, 30, 30));
 
+        no1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no1.setText("1");
+        no1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no1ActionPerformed(evt);
@@ -143,7 +154,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no1, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 226, 49, 40));
 
+        no2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no2.setText("2");
+        no2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no2ActionPerformed(evt);
@@ -151,7 +164,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no2, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 226, 49, 40));
 
+        no3.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no3.setText("3");
+        no3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no3ActionPerformed(evt);
@@ -159,7 +174,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no3, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 226, 49, 40));
 
+        no4.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no4.setText("4");
+        no4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no4ActionPerformed(evt);
@@ -167,7 +184,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no4, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 284, 49, 40));
 
+        no5.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no5.setText("5");
+        no5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no5ActionPerformed(evt);
@@ -175,7 +194,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no5, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 284, 49, 40));
 
+        no6.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no6.setText("6");
+        no6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no6ActionPerformed(evt);
@@ -183,7 +204,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no6, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 284, 49, 40));
 
+        no7.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no7.setText("7");
+        no7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no7ActionPerformed(evt);
@@ -191,7 +214,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no7, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 347, 49, 40));
 
+        no8.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no8.setText("8");
+        no8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no8ActionPerformed(evt);
@@ -199,7 +224,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no8, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 346, 49, 42));
 
+        no9.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no9.setText("9");
+        no9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no9ActionPerformed(evt);
@@ -207,6 +234,8 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no9, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 347, 49, 40));
 
+        clear.setBackground(new java.awt.Color(255, 232, 0));
+        clear.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         clear.setText("CLEAR");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,6 +244,8 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 228, 79, 36));
 
+        cancel.setBackground(new java.awt.Color(255, 0, 0));
+        cancel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         cancel.setText("CANCEL");
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,12 +260,15 @@ public class HomePage extends javax.swing.JFrame {
                 enterActionPerformed(evt);
             }
         });
-        getContentPane().add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 185, 65, -1));
+        getContentPane().add(enter, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 65, -1));
 
+        jLabel8.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel8.setText("Continue");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 60, 30));
         getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 114, -1, -1));
 
+        next.setBackground(new java.awt.Color(0, 204, 0));
+        next.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         next.setText("NEXT");
         next.setEnabled(false);
         next.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +280,9 @@ public class HomePage extends javax.swing.JFrame {
         getContentPane().add(option, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 39, 105, 16));
         getContentPane().add(click, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 143, -1, -1));
 
+        no0.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         no0.setText("0");
+        no0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         no0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 no0ActionPerformed(evt);
@@ -254,6 +290,8 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(no0, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 406, 183, 32));
 
+        back.setBackground(new java.awt.Color(106, 104, 104));
+        back.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         back.setText("BACK");
         back.setEnabled(false);
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -262,6 +300,36 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 406, 79, 32));
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Welcome To XYZ ATM");
+        jPanel1.add(jLabel1);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 50));
+
+        jPanel2.setBackground(new java.awt.Color(133, 192, 252));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 2));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 390, 160));
+
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 250, 250));
+
+        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 150, 250));
+
+        jPanel5.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 2));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 170, 160));
+
+        jPanel6.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 2));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 160, 160));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -457,6 +525,12 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JButton next;
     private javax.swing.JButton no0;
     private javax.swing.JButton no1;
