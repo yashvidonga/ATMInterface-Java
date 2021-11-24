@@ -464,6 +464,15 @@ public class ChangeAccPin extends javax.swing.JFrame {
                         String query = "UPDATE `users` SET `Pin` = " + newPinStr + " WHERE `Card No.` = " + cardNo;
                         pst.executeUpdate(query);
                         status2.setText("Pin Updated");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(ChangeAccPin.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        setVisible(false);
+                        Thankyou form1;
+                        form1 = new Thankyou();
+                        form1.setVisible(true);
                     }
                     else{
                         status2.setText("Pin can only Contain 4 Characters");
@@ -479,15 +488,7 @@ public class ChangeAccPin extends javax.swing.JFrame {
 }
         catch(ClassNotFoundException | SQLException e){ System.out.println("ERROR"+ e); }
         
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(ChangeAccPin.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        setVisible(false);
-        Thankyou form1;
-        form1 = new Thankyou();
-        form1.setVisible(true);
+        
     }//GEN-LAST:event_enterActionPerformed
 
     private void no1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_no1ActionPerformed

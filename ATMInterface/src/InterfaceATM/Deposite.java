@@ -463,6 +463,15 @@ public class Deposite extends javax.swing.JFrame {
                     String query = "UPDATE `users` SET `balance_amount` = " + amtT + " WHERE `Card No.` = " + cardNo;
                     pst.executeUpdate(query);
                     status1.setText("Amount Deposited");
+                    try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(ChangeAccPin.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        setVisible(false);
+                        Thankyou form1;
+                        form1 = new Thankyou();
+                        form1.setVisible(true);
                 }
                 else{
                     status1.setText("Incorrect Pin");
@@ -473,16 +482,7 @@ public class Deposite extends javax.swing.JFrame {
             connector.close();
 }
         catch(ClassNotFoundException | SQLException e){ System.out.println("ERROR"+ e); }
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Deposite.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        setVisible(false);
-        Thankyou form1;
-        form1 = new Thankyou();
-        form1.setVisible(true);
+        
     }//GEN-LAST:event_enterActionPerformed
 
     private void no1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_no1ActionPerformed

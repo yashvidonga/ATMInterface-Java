@@ -106,6 +106,11 @@ public class Withdraw extends javax.swing.JFrame {
 
         withdraw.setText("<<<");
         withdraw.setEnabled(false);
+        withdraw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                withdrawActionPerformed(evt);
+            }
+        });
         getContentPane().add(withdraw, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 61, 65, -1));
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
@@ -432,7 +437,7 @@ public class Withdraw extends javax.swing.JFrame {
         PreparedStatement pst = null;
         Connection connector = null;
         int pin = Integer.parseInt(pinField.getText());
-        double amt = Double.parseDouble(withdrawAmt.getText());
+        double amt1 = Double.parseDouble(withdrawAmt.getText());
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             connector = DriverManager.getConnection("jdbc:mysql://localhost:8111/atm_users?zeroDateTimeBehavior=CONVERT_TO_NULL","root","");
@@ -443,15 +448,29 @@ public class Withdraw extends javax.swing.JFrame {
                 int pinDatabase = rs.getInt(2);
                 double amtDatabase = rs.getDouble(3);
                 if (pin == pinDatabase){
-                    if (amt <= amtDatabase){
-                        amtDatabase -= amt;
+                    if (amt1 <= amtDatabase){
+                        amtDatabase -= amt1;
                         String amtT = Double.toString(amtDatabase);
                         String query = "UPDATE `users` SET `balance_amount` = " + amtT + " WHERE `Card No.` = " + cardNo;
                         pst.executeUpdate(query);
                         status1.setText("Amount Withdrawn");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(Deposite.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+
+                        setVisible(false);
+                        Thankyou form1;
+                        form1 = new Thankyou();
+                        form1.setVisible(true);
                     }
                     else{
-                        status1.setText("Amount to be Withdrawn Unavailable");
+                        status1.setText("Invalid Amount");
+                        pinField.setEnabled(false);
+                        pinLabel.setEnabled(false);
+                        withdrawAmt.setEnabled(true);
+                        amt.setEnabled(true);
                     }
                 }
                 else{
@@ -461,15 +480,6 @@ public class Withdraw extends javax.swing.JFrame {
             
             pst.close();
             connector.close();
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Withdraw.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            setVisible(false);
-            Thankyou form1;
-            form1 = new Thankyou();
-            form1.setVisible(true);
             }
         catch(ClassNotFoundException | SQLException e){ System.out.println("ERROR"+ e); }
     }//GEN-LAST:event_enterActionPerformed
@@ -600,6 +610,10 @@ public class Withdraw extends javax.swing.JFrame {
         HomePage form1 = new HomePage();
         form1.setVisible(true);
     }//GEN-LAST:event_backActionPerformed
+
+    private void withdrawActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_withdrawActionPerformed
 
     /**
      * @param args the command line arguments
